@@ -1,7 +1,15 @@
 # Journey Dashboards (Public)
 
-Hosts interactive SFMC marketing-automation journey visualizations for embedding in the Base44 Lifecycle Journeys app.
+Hosts interactive SFMC marketing-automation journey visualisations for embedding in the Base44 Lifecycle Journeys app.
 
-Live: **https://drorav-byte.github.io/journey-dashboards-public/**
+## Live dashboards
 
-To publish a new dashboard, drop the HTML file in as `index.html` (or `<journey-name>.html`) and push.
+| Journey | URL |
+|---|---|
+| Leads Onboarding journey - Experienced (v28) | https://drorav-byte.github.io/journey-dashboards-public/ |
+| New Funded 2.0 (v5) | https://drorav-byte.github.io/journey-dashboards-public/new-funded-2.0.html |
+
+To publish a new dashboard:
+1. Run `python apps/journey-mapper/build_<journey>_dashboard.py` locally
+2. Copy the resulting HTML here with a slug filename
+3. `git push` — live in ~30s
