@@ -14,7 +14,8 @@ Hosts interactive SFMC marketing-automation journey visualisations for embedding
 ### KPI Flows
 | Journey | URL |
 |---|---|
-| Demo to FTD A/B (v3) | https://drorav-byte.github.io/journey-dashboards-public/demo-to-ftd.html |
+| Demo to FTD A/B (v4) | https://drorav-byte.github.io/journey-dashboards-public/demo-to-ftd.html |
+| Deposit without Position (v2) | https://drorav-byte.github.io/journey-dashboards-public/deposit-without-position.html |
 
 To publish a new dashboard:
 1. Run `python apps/journey-mapper/build_<journey>_dashboard.py` locally
