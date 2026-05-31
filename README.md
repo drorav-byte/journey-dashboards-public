@@ -4,11 +4,17 @@ Hosts interactive SFMC marketing-automation journey visualisations for embedding
 
 ## Live dashboards
 
+### Lifecycle Journeys
 | Journey | URL |
 |---|---|
-| Leads Onboarding journey - Experienced (v28) | https://drorav-byte.github.io/journey-dashboards-public/ |
+| Leads Onboarding - Experienced (v28) | https://drorav-byte.github.io/journey-dashboards-public/ |
 | New Funded 2.0 (v5) | https://drorav-byte.github.io/journey-dashboards-public/new-funded-2.0.html |
 | 0086_OnboardingWelcome_Journey (v2) | https://drorav-byte.github.io/journey-dashboards-public/onboarding-welcome.html |
+
+### KPI Flows
+| Journey | URL |
+|---|---|
+| Demo to FTD A/B (v3) | https://drorav-byte.github.io/journey-dashboards-public/demo-to-ftd.html |
 
 To publish a new dashboard:
 1. Run `python apps/journey-mapper/build_<journey>_dashboard.py` locally
