@@ -10,6 +10,7 @@ Hosts interactive SFMC marketing-automation journey visualisations for embedding
 | Leads Onboarding - Experienced (v28) | https://drorav-byte.github.io/journey-dashboards-public/ |
 | New Funded 2.0 (v5) | https://drorav-byte.github.io/journey-dashboards-public/new-funded-2.0.html |
 | 0086_OnboardingWelcome_Journey (v2) | https://drorav-byte.github.io/journey-dashboards-public/onboarding-welcome.html |
+| New Depositor Only Journey (v9) | https://drorav-byte.github.io/journey-dashboards-public/new-depositor-only.html |
 
 ### KPI Flows
 | Journey | URL |
