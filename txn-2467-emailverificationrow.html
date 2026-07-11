@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Journey Map — 2467_emailverificationROW</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;background:#0d1117;color:#e0e0e0;min-height:100vh;padding:0}
+.hdr{background:#161b22;border-bottom:1px solid #21262d;padding:16px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hdr h1{font-size:16px;font-weight:700;color:#f0f6fc}
+.pill{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:#7E57C2;color:#fff}
+.entry-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#4A148C;color:#EDE7F6;border:1px solid #7E57C2}
+.chips{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap;font-size:11px;color:#8b949e}
+.chip b{color:#c9d1d9}
+.main{display:grid;grid-template-columns:340px 1fr;gap:24px;padding:24px;max-width:1200px;margin:0 auto}
+.flow{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:20px}
+.flow h3{font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;margin:0 0 16px}
+.node{border-radius:8px;padding:14px 16px;margin-bottom:12px;position:relative}
+.node.entry{background:#4A148C;border:2px solid #7E57C2;color:#EDE7F6}
+.node.email{background:#00C896;border:2px solid #007a5e;color:#000;font-weight:600}
+.node.exit{background:#1B5E20;border:2px solid #2E7D32;color:#A5D6A7;font-size:12px}
+.arrow{text-align:center;color:#8b949e;font-size:18px;margin:-4px 0 8px}
+.email-name{font-size:12px;font-family:Consolas,monospace;opacity:0.85}
+.sfmc-link{display:inline-block;margin-top:8px;font-size:11px;color:#00C896;text-decoration:none;font-weight:600}
+.preview{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:20px}
+.preview h3{font-size:13px;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;margin:0 0 16px}
+.preview img{max-width:100%;border-radius:4px;border:1px solid #21262d;display:block}
+.no-preview{color:#57606a;font-style:italic;padding:20px;text-align:center;border:1px dashed #30363d;border-radius:6px}
+.meta{margin-top:16px;font-size:11px;color:#57606a;line-height:1.6}
+.meta b{color:#c9d1d9}
+</style></head><body>
+<div class="hdr">
+  <h1>⚡ 2467_emailverificationROW</h1>
+  <span class="pill">Transactional</span>
+  <span class="entry-pill">🔌 API-triggered</span>
+  <div class="chips">
+    <span class="chip"><b>Version</b> v1</span>
+    <span class="chip"><b>Status</b> Published</span>
+    <span class="chip"><b>Modified</b> 2023-05-08</span>
+    <span class="chip"><b>ID</b> f57cd038…</span>
+  </div>
+</div>
+<div class="main">
+  <div class="flow">
+    <h3>📊 Flow</h3>
+    <div class="node entry">🔌 API Trigger<br><span style="font-size:11px;opacity:0.8">transactional-api event</span></div>
+    <div class="arrow">↓</div>
+    <div class="node email">📧 2467_emailverificationROW<br><span class="email-name">2467_emailverificationROWFinal</span>
+      <br><a class="sfmc-link" href="https://mc.s50.exacttarget.com/cloud/#app/Email/C12/2467" target="_blank">Open in SFMC ↗</a>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="node exit">✅ Sent</div>
+    <div class="meta">
+      <b>Type:</b> Transactional (single-step)<br>
+      <b>Trigger:</b> Direct API call from backend<br>
+      <b>Audience:</b> Individual recipient per call
+    </div>
+  </div>
+  <div class="preview">
+    <h3>📧 Email preview</h3>
+    <div class="no-preview">Preview unavailable</div>
+  </div>
+</div>
+</body></html>
