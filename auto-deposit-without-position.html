@@ -112,6 +112,11 @@ const network = new vis.Network(document.getElementById('graph'), {nodes,edges},
   nodes:{margin:{top:10,bottom:10,left:14,right:14},widthConstraint:{minimum:100,maximum:180}},
   edges:{width:1.5,selectionWidth:2.5,smooth:{type:'cubicBezier',roundness:0.4}}
 });
+// Auto-fit the graph once after initial render + on window resize, so the
+// hierarchical layout stretches to fill the container instead of leaving
+// blank space around a small centered graph.
+network.once('afterDrawing', () => setTimeout(() => network.fit({animation:false}), 50));
+window.addEventListener('resize', () => network.fit({animation:false}));
 network.on('click', p => {
   const nid=p.nodes[0]; if(!nid) return;
   const key=KMAP[String(nid)]; if(!key) return;
