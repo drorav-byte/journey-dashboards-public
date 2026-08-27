@@ -10,7 +10,7 @@ body{font-family:Inter,sans-serif;background:#0d1117;color:#e0e0e0;height:100vh;
 .pill{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:#00C896;color:#000}
 .chips{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap}
 .chip{font-size:11px;color:#8b949e}.chip b{color:#c9d1d9}
-.main{display:flex;flex:1;overflow:hidden}
+.main{display:flex;flex:1 1 auto;min-height:0;overflow:hidden}
 .sidebar{width:280px;flex-shrink:0;background:#161b22;border-right:1px solid #21262d;display:flex;flex-direction:column;overflow:hidden}
 .sidebar-hdr{padding:12px 14px;font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;border-bottom:1px solid #21262d}
 .email-list{overflow-y:auto;flex:1;padding:8px}
@@ -130,11 +130,14 @@ const network = new vis.Network(document.getElementById('graph'), {nodes,edges},
   nodes:{margin:{top:10,bottom:10,left:14,right:14},widthConstraint:{minimum:100,maximum:180}},
   edges:{width:1.5,selectionWidth:2.5,smooth:{type:'cubicBezier',roundness:0.4}}
 });
-// Auto-fit the graph once after initial render + on window resize, so the
-// hierarchical layout stretches to fill the container instead of leaving
-// blank space around a small centered graph.
-network.once('afterDrawing', () => setTimeout(() => network.fit({animation:false}), 50));
-window.addEventListener('resize', () => network.fit({animation:false}));
+// Auto-fit the graph once after initial render, then again after the layout
+// settles, plus on any container resize. Without the ResizeObserver the
+// graph shows blank space when Base44 embeds it in an iframe whose height
+// is larger than what fit() first measured.
+const fitGraph = () => network.fit({animation:false});
+network.once('afterDrawing', () => { setTimeout(fitGraph, 50); setTimeout(fitGraph, 400); });
+window.addEventListener('resize', fitGraph);
+try { new ResizeObserver(fitGraph).observe(document.getElementById('graph-wrap')); } catch(e) {}
 network.on('click', p => {
   const nid=p.nodes[0]; if(!nid) return;
   const key=KMAP[String(nid)]; if(!key) return;
